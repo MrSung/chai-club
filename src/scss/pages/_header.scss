@@ -1,0 +1,171 @@
+.header {
+  width: 100%;
+  background-color: $color-cornsilk;
+  .top & {
+    @media #{$pc} {
+      position: absolute;
+      z-index: 1;
+      background-color: transparent;
+    }
+  }
+  .container {
+    display: flex;
+    padding-bottom: .5rem;
+    @media #{$pc} {
+      padding-top: .75rem;
+    }
+    @media #{$sp} {
+      flex-wrap: wrap;
+      padding: .25rem 0;
+    }
+  }
+  &__logo {
+    max-width: 180px;
+    text-align: center;
+    @media #{$pc} {
+      @include push--auto;
+    }
+    @media #{$sp} {
+      padding-left: 15px;
+      margin-right: auto;
+    }
+    @media #{$xs} {
+      margin-right: 0;
+    }
+    .logo {
+      @media #{$sp} {
+        padding-top: 6px;
+        text-align: left;
+      }
+    }
+    a:any-link {
+      color: $color-smokyblack;
+    }
+    .top & a {
+      @media #{$pc} {
+        color: #fff;
+      }
+    }
+    img {
+      vertical-align: bottom;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: calc(#{$width-container} - 208px - 100px);
+    @media #{$sp} {
+      display: none;
+      order: 1;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+      @media #{$sp} {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    li {
+      @media #{$sp} {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    a {
+      display: block;
+      padding: 1rem;
+      letter-spacing: 1px;
+    }
+    .top & a {
+      @media #{$pc} {
+        color: #fff;
+      }
+      &:hover {
+        color: $color-peridot;
+      }
+    }
+    &--loggedin {
+      width: calc(#{$width-container} - 208px - 200px);
+    }
+  }
+  &__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    @media #{$pc} {
+      margin-left: auto;
+    }
+    a {
+      display: block;
+      padding: .75rem;
+      letter-spacing: 1px;
+      @media #{$pc} {
+        padding: .5rem;
+        text-align: center;
+      }
+      .top & {
+        @media #{$pc} {
+          color: #fff;
+        }
+      }
+    }
+    .top & a {
+      @media #{$pc} {
+        color: #fff;
+      }
+    }
+    &--loggedin {
+      @media #{$pc} {
+        width: 200px;
+      }
+      @media #{$sp} {
+        width: 130px;
+      }
+    }
+  }
+  &__logout {
+    @media #{$pc} {
+      margin-left: 1rem;
+    }
+    input[type="submit"] {
+      background: none;
+      border: none;
+      transition: $transition-link;
+      letter-spacing: 1px;
+      &:hover {
+        cursor: pointer;
+        color: $color-peridot;
+      }
+    }
+    .top & input[type="submit"] {
+      @media #{$pc} {
+        color: #fff;
+      }
+    }
+  }
+  &__btn {
+    @media #{$pc} {
+      display: none;
+    }
+    @media #{$sp} {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+    @media #{$xs} {
+      width: 100%;
+    }
+    .burger {
+      @media #{$xs} {
+        @include push--auto;
+      }
+    }
+  }
+}

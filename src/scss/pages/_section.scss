@@ -1,0 +1,18 @@
+.section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  &__h2 {
+    margin-top: .5rem;
+    font-family: $font-sub-cursive;
+    font-size:  2.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  &--concept,
+  &--newsletter {
+    background-color: rgba(#fff, .75);
+  }
+  &--products {
+    background: linear-gradient(rgba(#fff, .25), rgba(#fff, .25)), url(../../images/seamless_pattern_color_08.jpg);
+  }
+}

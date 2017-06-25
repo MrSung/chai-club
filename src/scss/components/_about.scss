@@ -1,0 +1,26 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media #{$sp} {
+    flex-direction: column;
+  }
+  &__photo {
+    @media #{$pc} {
+      width: 45%;
+    }
+  }
+  &__desc {
+    @media #{$pc} {
+      width: 50%;
+    }
+    blockquote {
+      margin: 0;
+    }
+    p:first-of-type {
+      @media #{$pc} {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+  &__h1,
+  &__p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  &__h1 {
+    font-family: $font-main-sanserif;
+    font-weight: 300;
+    line-height: 1;
+  }
+  &__p {
+    font-family: $font-sub-cursive;
+    font-weight: normal;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+}

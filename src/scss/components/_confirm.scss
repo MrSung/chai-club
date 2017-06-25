@@ -1,0 +1,102 @@
+.confirm {
+  &__h2 {
+    
+  }
+  &__items,
+  &__total {
+    font-size: 1.25rem;
+    @media #{$sp} {
+      font-size: 1rem;
+    }
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    @media #{$sp} {
+      flex-wrap: wrap;
+      margin-bottom: .75rem;
+    }
+  }
+  &__hr {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__total {
+    text-align: right;
+  }
+  &__name {
+    @media #{$sp} {
+      
+    }
+  }
+  &__cart {
+    @media #{$sp} {
+      
+    }
+  }
+  &__price {
+    margin-left: auto;
+    @media #{$pc} {
+      margin-right: .5rem;
+    }
+    @media #{$sp} {
+      margin-left: auto;
+    }
+  }
+  &__select {
+    
+    &--wrap {
+      @media #{$pc} {
+        margin-right: .5rem;  
+      }
+      @media #{$sp} {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 75%;
+      }
+    }
+  }
+  &__change {
+    @media #{$pc} {
+      margin-top: -2px;
+    }
+    @media #{$sp} {
+      display: flex;
+      justify-content: flex-end;
+      width: 25%;
+    }
+  }
+  &__select,
+  input[type="number"],
+  input[type="submit"] {
+    font-size: 1rem;
+    height: 1.75em;
+  }
+  &__btn {
+    background-color: $color-lightgray;
+    border-style: solid;
+    border-color: $color-lightgray;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+  &__sum {
+    margin-right: calc(1.75rem + 2px);
+  }
+  input[type="number"] {
+    width: 3rem;
+  }
+  input[type="submit"] {
+    
+  }
+}

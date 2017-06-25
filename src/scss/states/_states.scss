@@ -1,0 +1,71 @@
+.is-active {
+  .burger {
+    @include burger-to-cross;
+  }
+}
+.is-hidden {
+  display: none;
+}
+.bg-primary {
+  color: #fff;
+  background-color: #337ab7;
+}
+.bg-success {
+  background-color: #dff0d8;
+}
+.bg-info {
+  background-color: #d9edf7;
+}
+.bg-warning {
+  background-color: #fcf8e3;
+}
+.bg-danger {
+  background-color: #f2dede;
+}
+.txt-error {
+  @extend .bg-danger;
+}
+.label {
+  height: 60px;
+  padding: 0 0 0 1rem;
+  border-width: 1px;
+  border-style: solid;
+  margin: auto;
+  line-height: 60px;
+  font-size: 1rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  z-index: 11111;
+  @media #{$pc} {
+    width: $width-container;
+  }
+  @media #{$sp} {
+    width: 100%;
+  }
+  &__close {
+    font-size: 2rem;
+    padding: 0 .75em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &-error {
+    @extend .bg-danger;
+    color: #ff1053;
+    border-color: #ff1053;
+  }
+  &-success {
+    background-color: #e2f9ee;
+    color: #339479;
+    border-color: #9cddcb;
+  }
+}
+.is-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}

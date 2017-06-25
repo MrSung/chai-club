@@ -1,0 +1,38 @@
+.main {
+  min-height: calc(100vh - 175px);
+  .products &,
+  .product &,
+  .about &,
+  .confirm & {
+    @media #{$pc} {
+      position: relative;
+    }
+    &::before,
+    &::after {
+      @media #{$pc} {
+        content: '';
+        width: 116px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-repeat: repeat-y;
+        background-size: 70%;
+      }
+    }
+    &::before {
+      @media #{$pc} {
+        left: 0;
+        background-position: left top;
+        background-image: url(../../images/bg_pattern-left.png);
+      }
+    }
+    &::after {
+      @media #{$pc} {
+        right: 0;
+        background-position: right top;
+        background-image: url(../../images/bg_pattern-right.png);
+      }
+    }
+  }
+}

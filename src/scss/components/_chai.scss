@@ -1,0 +1,59 @@
+.chai {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media #{$sp} {
+    flex-direction: column;
+  }
+  &__photo {
+    @media #{$pc} {
+      width: 50%;
+    }
+  }
+  &__desc {
+    @media #{$pc} {
+      width: 44%;
+    }
+  }
+  &__h3 {
+    @media #{$pc} {
+      margin-top: 0;
+    }
+  }
+  &__price {
+    font-weight: bold;
+    color: $color-awesome;
+  }
+  &__txt {
+
+  }
+  &__quantity {
+    @include cf;
+    input[type="number"] {
+      padding: .5rem .75rem .5rem 1.5rem;
+      @media #{$sp} {
+        padding: calc(1rem - 1px);
+        border: 1px solid rgb(238, 238, 238);
+      }
+    }
+  }
+  &__add {
+    @media #{$sp} {
+      margin: 0;
+    }
+    input[type="submit"] {
+      @media #{$sp} {
+        margin-left: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  form {
+    @media #{$sp} {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

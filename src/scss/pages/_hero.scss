@@ -1,0 +1,48 @@
+.hero {
+  width: 100%;
+  height: 500px;
+  background: url(../../images/img_hero.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    @media #{$pc} {
+      padding-right: 130px;
+    }
+  }
+  &__message {
+    font-family: $font-main-serif;
+    font-size: 2.5rem;
+    @media #{$sp} {
+      font-size: 2rem;
+    }
+    .ib {
+      display: inline-block;
+    }
+  }
+  &__btn {
+    margin-bottom: 5rem;
+  }
+  &__video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../../images/bg_video.jpg) no-repeat center;
+    background-size: cover;
+    transition: 1s opacity;
+    @media #{$sp} {
+      display: none;
+    }
+  }
+}

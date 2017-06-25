@@ -1,0 +1,22 @@
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &--sm {
+    padding: calc(.5rem + 1px) calc(1rem + 1px);
+    font-size: 14px;
+  }
+  &--peridot {
+    background-color: $color-peridot;
+  }
+  &--awesome {
+    background-color: $color-awesome;
+    color: #fff;
+  }
+}
